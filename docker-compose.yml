@@ -1,0 +1,16 @@
+services:
+
+  db:
+    container_name: recipe
+    image: postgres
+    environment:
+      POSTGRES_USER: ryan
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: recipe
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    ports:
+      - 8000:8080
